@@ -222,6 +222,7 @@ body {
 #slide-1 {
 	background-image: url('../images/bg2.jpg');
 	color: #ffffff;
+	background-position: center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
