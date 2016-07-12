@@ -10,14 +10,14 @@
 #splashscreen,#splash-in{
     height:100vh;
     width:100%;
-    background:#0E172E;
+    background:#000;
     position:fixed;
     z-index:1000;
 }
 #splash-in{
     background:url('../images/rat.gif') no-repeat;
     background-position:center center;
-    background-size:200px;
+    background-size:1600px;
 } 
  
  
