@@ -21,17 +21,17 @@
 }
 @-webkit-keyframes love {
     to {
-        -webkit-transform: scale(1.2);
+        -webkit-transform: scale(1.1);
     }
 }
 @-moz-keyframes love {
     to {
-        -moz-transform: scale(1.2);
+        -moz-transform: scale(1.1);
     }
 }
 @keyframes love {
     to {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
  
