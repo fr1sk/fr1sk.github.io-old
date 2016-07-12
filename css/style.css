@@ -6,6 +6,19 @@
  * Version: 1.0
  * URL: http://blacktie.co
  */
+.love {
+    color: #e74c3c;
+    display: inline-block;
+    font-size: 1.4em;
+    position: relative;
+    top: .2em;
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    transform: scale(.9);
+    -webkit-animation: love .5s infinite linear alternate-reverse;
+    -moz-animation: love .5s infinite linear alternate-reverse;
+    animation: love .5s infinite linear alternate-reverse;
+}
  
 #splashscreen,#splash-in{
     height:100vh;
