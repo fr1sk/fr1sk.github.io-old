@@ -1,4 +1,6 @@
 
+ $("#splashscreen, #splash-in").delay( 800 ).fadeOut("slow");
+
 $(document).ready(function(e) {
 	$('.with-hover-text, .regular-link').click(function(e){
 		e.stopPropagation();
