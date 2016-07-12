@@ -1,7 +1,8 @@
 
- $("#splashscreen, #splash-in").delay( 800 ).fadeOut("slow");
 
 $(document).ready(function(e) {
+	$("#splashscreen, #splash-in").delay( 800 ).fadeOut("slow");
+	
 	$('.with-hover-text, .regular-link').click(function(e){
 		e.stopPropagation();
 	});
