@@ -19,6 +19,21 @@
     -moz-animation: love .5s infinite linear alternate-reverse;
     animation: love .5s infinite linear alternate-reverse;
 }
+@-webkit-keyframes love {
+    to {
+        -webkit-transform: scale(1.2);
+    }
+}
+@-moz-keyframes love {
+    to {
+        -moz-transform: scale(1.2);
+    }
+}
+@keyframes love {
+    to {
+        transform: scale(1.2);
+    }
+}
  
 #splashscreen,#splash-in{
     height:100vh;
