@@ -238,11 +238,11 @@ body {
 	
 	
 	.nav li[data-slide="3"] {
-		background-color: #34495e;
+		background-color: #ff563d;  
 	}
 	
 	.nav li[data-slide="5"] {
-		background-color: #e67e22;
+		background-color: #34495e;
 	}
 	
 	.navbar-brand {
