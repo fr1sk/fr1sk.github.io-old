@@ -280,6 +280,15 @@ RESPONSIBLE</span></div>
 		$('img[usemap]').rwdImageMaps();
 
 	</script>
+	<!-- navbar responsive click hide -->
+	<script>
+		$(document).on('click','.navbar-collapse.in',function(e) {
+    		if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        		$(this).collapse('hide');
+    			}
+		});
+		
+	</script>
 	
 	<!-- tracking script -->
 	<script type="text/javascript">
