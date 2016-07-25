@@ -240,9 +240,12 @@ body {
 	.nav li[data-slide="3"] {
 		background-color: #ff563d;  
 	}
+	.nav li[data-slide="4"] {
+		background-color: #34495e;
+	}
 	
 	.nav li[data-slide="5"] {
-		background-color: #34495e;
+		background-color: #F39C12;
 	}
 	
 	.navbar-brand {
