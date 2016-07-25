@@ -279,8 +279,13 @@ RESPONSIBLE</span></div>
 	<!-- responsive image mapping -->
 	<script>
 		$(document).ready(function(e) {
-		$('img[usemap]').rwdImageMaps();
-
+			$('img[usemap]').rwdImageMaps();
+		});
+		 $(document).ready(function () {
+        		$(".navbar-nav li.trigger-collapse a").click(function(event) {
+          		$(".navbar-collapse").collapse('hide');
+        		});
+      		});
 	</script>
 	<!-- navbar responsive click hide -->
 	<script>
