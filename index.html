@@ -13,7 +13,10 @@
 	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 	
-	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/obrci.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	
 	
@@ -22,9 +25,13 @@
 </head>
 
 <body>	
+	
 	<div id='splashscreen'>
             <div id='splash-in'></div>
         </div>
+	
+	
+	
 	<div class="navbar navbar-fixed-top" data-activeslide="1">
 		<div class="container">
 		
@@ -65,12 +72,18 @@
 	
 	
 	<!-- === MAIN Background === -->
+	
+
 	<div class="slide story" id="slide-1" data-slide="1" arrow-slide="1">
+
 		<div class="container">
+			
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
-					<h1 class="font-semibold">MARKO <span class="font-thin">JOVANOVIC</span></h1>
-					<h4 class="font-thin">Junior <span class="font-semibold">software</span> developer.</h4>
+				<p id="t1"></p>
+					
+					<h1 class="font-semibold" id="padre">MARKO<span class="font-thin" id="t2">JOVANOVIC</span></h1>
+					<h4 class="font-thin" id="t3">Junior <span class="font-semibold" id="t4">software</span> developer.</h4>
 					<br>
 					<br>
 				</div><!-- /col-12 -->
@@ -86,6 +99,7 @@ RESPONSIBLE</span></div>
 	
 	<!-- === Slide 2 === -->
 	<div class="slide story" id="slide-2" data-slide="2" arrow-slide="2">
+		<canvas id="canvas2"></canvas>
 		<div class="container">
 			<div class="row title-row">
 				<div class="col-12 font-thin"><span class="font-semibold">Computer Science</span> student at Faculty of Mathematics, University of Belgrade. I'm in <span class="love"><i class="icon2 icon-heart"></i></span> with coding and also interested in almost anything related to IT.</div>
@@ -137,7 +151,7 @@ RESPONSIBLE</span></div>
     <area alt="" title="" href="" class="home-hover navigation-slide" data-slide="5" shape="poly" coords="506,185,555,186,555,275,506,275" />
     <area alt="" title="" href="pacman.html" shape="poly" coords="1270,237,1344,239,1344,270,1271,270" />
     <area alt="" title="" href="fr1sk.html" shape="poly" coords="839,253,878,255,877,269,840,271" />
-    
+    <area alt="" title="" href="terminal.html" shape="poly" coords="492,95,539,96,539,164,491,163" />
 </map>
     </div>
 			     
@@ -161,6 +175,7 @@ RESPONSIBLE</span></div>
 	
 
 	<div class="slide story" id="slide-4" data-slide="4">
+	<canvas id="canvas1"></canvas>
 		  <div class="container">
 			<div class="row title-row">
 				<div class="col-12 font-thin">See my <span class="font-semibold">skills</span></div>
@@ -248,6 +263,7 @@ RESPONSIBLE</span></div>
 					<p><a target="_blank" href="http://www.twitter.com/fr1skGG"><i class="icon icon-twitter"></i></a></p>
 					<span class="hover-text font-light ">@fr1skGG</span></a>
 				</div><!-- /col12 -->
+
                
 				
         
@@ -268,14 +284,20 @@ RESPONSIBLE</span></div>
 </body>
 
 	<!-- SCRIPTS -->
+	
 	<script src="js/html5shiv.js"></script>
 	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+	<script src="js/typed.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" src="dots.js"></script>
+	<script src="js/obrci.js"></script>
+
 	<!-- responsive image mapping -->
 	<script>
 		$(document).ready(function(e) {
@@ -320,8 +342,47 @@ RESPONSIBLE</span></div>
         whoparam.push(["SendHit", ""]
     );
 </script>
-	
-	<!-- fancybox init -->
-	
 
+<!--
+<script>
+  $(document).ready(function(){
+      $("#t1").typed({
+        strings: ["Hi there", "I am", "MARKO JOVANOVIC"],
+        typeSpeed: 60
+      });
+	 
+    
+  });
+</script>
+<script>
+$(window).load(function(e) {
+		//-- hide preloader
+		$('.preloader').addClass('animated fadeOut');
+		
+		//-- show home content
+		var showContent = setTimeout(function(){
+			ShowHomeContent();
+			
+			//-- hide preloader
+			$('.preloader').hide();
+			
+			//-- 3.1 activate word rotator plugin
+			$("#padre").wordsrotator({
+    			autoLoop: true,                  										//-- auto rotate words
+    			randomize: false,                										//-- show random entries from the words array
+    			stopOnHover: false,              										//-- stop animation on hover
+    			changeOnClick: false,            										//-- force animation run on click
+    			animationIn: "fadeInDown",          									//-- css class for entrace animation
+    			animationOut: "fadeOutUp",        										//-- css class for exit animation
+    			speed: 3000,               		 										//-- delay in milliseconds between two words
+    			words: ['we are<br><span class="highlight">creative agency</span>', 'we create<br><span class="highlight">awesome product</span>']  	//-- Array of words, it may contain HTML values
+			});
+			
+			clearTimeout(this);
+		},1000);
+    });
+	
+	
+</script>
+-->
 </html>
